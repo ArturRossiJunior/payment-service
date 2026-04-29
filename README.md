@@ -9,9 +9,9 @@
 ![Railway](https://img.shields.io/badge/Railway-Cloud_Deploy-0B0D0E?logo=railway)
 > **ℹ️ Nota do Desenvolvedor:** Este projeto foi desenvolvido com fins educacionais e para composição de portfólio. O objetivo é demonstrar padrões de arquitetura de microserviços, processamento assíncrono (workers) e arquitetura orientada a eventos (Event-Driven Architecture).
 
-Parte do ecossistema **Cinema Microservices**, o `payment-service` atua em background como um worker — ouvindo eventos de novas reservas e simulando a aprovação ou recusa de pagamentos. Veja também o serviço parceiro: [`booking-service`](../bookingservice).
+Parte do ecossistema **Cinema Microservices**, o `payment-service` atua em background como um worker — ouvindo eventos de novas reservas e simulando a aprovação ou recusa de pagamentos. Veja também o serviço parceiro: [`booking-service`](https://github.com/ArturRossiJunior/booking-service).
 
-> **⚠️ Dependência de Infraestrutura:** Este serviço **não gerencia sua própria infraestrutura**. O PostgreSQL e o RabbitMQ são provisionados pelo `docker-compose.yml` localizado na raiz do [`booking-service`](../bookingservice). Suba a infraestrutura daquele projeto antes de iniciar este.
+> **⚠️ Dependência de Infraestrutura:** Este serviço **não gerencia sua própria infraestrutura**. O PostgreSQL e o RabbitMQ são provisionados pelo `docker-compose.yml` localizado na raiz do [`booking-service`](https://github.com/ArturRossiJunior/booking-service). Suba a infraestrutura daquele projeto antes de iniciar este.
 
 ---
 
