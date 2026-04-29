@@ -52,6 +52,7 @@ graph TD
 | PostgreSQL | 16 | Banco de dados isolado (`payment_db`) |
 | Flyway | — | Migrations para criação da tabela de pagamentos |
 | RabbitMQ | 3 | Mensageria assíncrona |
+| Docker & Compose |   | Orquestração da infraestrutura local |
 
 ## ☁️ CI/CD & Deploy na Nuvem (Railway)
 
