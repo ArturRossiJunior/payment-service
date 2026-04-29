@@ -21,7 +21,7 @@ Parte do ecossistema **Cinema Microservices**, o `payment-service` atua em backg
 | Tecnologia | Papel no Projeto | Conceitos Aplicados |
 |---|---|---|
 | 🐳 **Docker & Docker Compose** | A infraestrutura (PostgreSQL + RabbitMQ) é provisionada pelo `booking-service` e consumida por este serviço — demonstrando containers compartilhados entre serviços distintos. | Isolamento de containers, banco de dados dedicado por serviço (`payment_db`), redes Docker compartilhadas. |
-| 🐇 **RabbitMQ** | Único canal de comunicação deste serviço. **Sem endpoints HTTP** — 100% orientado a eventos. | Consumers/Listeners (`@RabbitListener`), processamento reativo de mensagens, publicação de respostas em fila, desacoplamento total. |
+| 🐇 **RabbitMQ** | Canal principal de comunicação do worker. | Consumers/Listeners (`@RabbitListener`), processamento reativo de mensagens, publicação de respostas em fila, desacoplamento. |
 | 🧩 **Microserviços** | Serviço autônomo com uma única responsabilidade: processar pagamentos. Escala e falha de forma independente. | Database-per-Service, Event-Driven Architecture, contratos tipados com Enums, trilha de auditoria distribuída. |
 | 🧪 **Testes Automatizados** | Garantia de que a regra de negócio do worker nunca quebre, rodando isolada. | Mocks (Mockito), Isolamento de Banco (H2 Database), Testes de Controladores e Listeners Assíncronos. |
 
@@ -29,7 +29,7 @@ Parte do ecossistema **Cinema Microservices**, o `payment-service` atua em backg
 
 ## 🏗️ Arquitetura e Papel no Sistema
 
-Este serviço **não expõe endpoints HTTP**. Toda a comunicação acontece de forma reativa através do **RabbitMQ**: ele consome eventos de pagamento e publica os resultados de volta.
+Este serviço expõe endpoints HTTP via REST, porém sua comunicação entre as outras peças do ecossistema acontece de forma reativa e autônoma através do **RabbitMQ**: ele consome eventos de pagamento em background e publica os resultados de volta.
 
 ```mermaid
 graph TD
