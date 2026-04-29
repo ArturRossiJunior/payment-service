@@ -7,7 +7,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue?logo=docker)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?logo=github-actions)
 ![Railway](https://img.shields.io/badge/Railway-Cloud_Deploy-0B0D0E?logo=railway)
-> **ℹ️ Nota do Desenvolvedor:** Este projeto foi desenvolvido com fins educacionais e para composição de portfólio. O objetivo é demonstrar padrões de arquitetura de microserviços, processamento assíncrono (workers) e arquitetura orientada a eventos (Event-Driven Architecture).
+> **ℹ️ Nota do Desenvolvedor:** Este projeto foi desenvolvido com fins educacionais. O objetivo é demonstrar padrões de arquitetura de microserviços, processamento assíncrono (workers) e arquitetura orientada a eventos (Event-Driven Architecture).
 
 Parte do ecossistema **Cinema Microservices**, o `payment-service` atua em background como um worker — ouvindo eventos de novas reservas e simulando a aprovação ou recusa de pagamentos. Veja também o serviço parceiro: [`booking-service`](https://github.com/ArturRossiJunior/booking-service).
 
